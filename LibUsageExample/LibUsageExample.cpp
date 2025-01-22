@@ -128,10 +128,8 @@ int wmain(const int argc, wchar_t** argv) {
 		intel_driver::Unload(iqvw64e_device_handle);
 		return -1;
 	}
-	else if (mdlMode) {
-		mode = kdmapper::AllocationMode::AllocateMdl;
-	}
-	else if (indPagesMode) {
+
+	if (indPagesMode) {
 		mode = kdmapper::AllocationMode::AllocateIndependentPages;
 	}
 
